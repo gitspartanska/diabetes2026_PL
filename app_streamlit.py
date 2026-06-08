@@ -103,10 +103,11 @@ with st.sidebar:
 df = user_input_features()
 
 # Load the model (cached)
-model1 = load_model("diabetes_model1.pkl")
-model2 = load_model("diabetes_model2.pkl",2)
-model3 = load_model("diabetes_model3.pkl","3a",True)
-sacler3 =  load_model("scaler3.pkl","3b",True)
+model1 = load_model("models/diabetes_model1.pkl")
+model2 = load_model("models/diabetes_model2.pkl",2)
+model3 = load_model("models/diabetes_model3.pkl","3a",True)
+sacler3 =  load_model("models/scaler3.pkl","3b",True)
+
 
 # Display user's input features
 st.subheader('Dane wprowadzone przez użytkownika')
