@@ -10,7 +10,7 @@ from model_utils import RenameDPF
 st.title('🩺 Przewidywanie ryzyka cukrzycy')
 st.badge("MIT license", color="blue")
 st.write('### Wstęp\n')
-txt ='Oto prosta interaktywna aplikacja pozwalająca na podstawie modelu ML oszacować prawdopodobieństwo wystąpienia cukrzycy na podstawie uzupełnionych danych. Cukrzyca jest ogólną nazwą grupy chorób metabolicznych, które charakteryzują się podwyższonym poziomem glukozy we krwi (hiperglikemią), wywołaną zbytn niską produkcją insuliny lub jej defektem. Cukrzyca jest chorobą dotykającą miliony ludzi na całym świecie, a jej wczesne wykrycie pozwala na podjęcie natychmiastowego leczenia i zapobiegnięcie pogorszeniu sie stanu zdrowia.'
+txt ='Oto prosta interaktywna aplikacja pozwalająca za pomocą modelu ML oszacować prawdopodobieństwo wystąpienia cukrzycy na podstawie uzupełnionych danych. Cukrzyca jest ogólną nazwą grupy chorób metabolicznych, które charakteryzują się podwyższonym poziomem glukozy we krwi (hiperglikemią), wywołaną zbytn niską produkcją insuliny lub jej defektem. Cukrzyca jest chorobą dotykającą miliony ludzi na całym świecie, a jej wczesne wykrycie pozwala na podjęcie natychmiastowego leczenia i zapobiegnięcie pogorszeniu sie stanu zdrowia.'
 st.markdown(f'<div style="text-align: justify;">{txt}</div>', unsafe_allow_html=True)
 st.write("Więcej na temat cukrzycy można znaleźć na poniższych stronach:\n * [https://pl.wikipedia.org/wiki/Cukrzyca](https://pl.wikipedia.org/wiki/Cukrzyca)\n * Cukrzyca insulinozależna [ICD10 E10](https://remedium.md/icd10/zaburzenia-wydzielania-wewnetrznego-stanu-odzywienia-i-przemiany-metabolicznej/cukrzyca-insulinozalezna) \n* Cukrzyca insulinoniezależna [ICD10 E11](https://remedium.md/icd10/zaburzenia-wydzielania-wewnetrznego-stanu-odzywienia-i-przemiany-metabolicznej/cukrzyca-insulinoniezalezna)\n * Cukrzyca związana z niedożywieniem [ICD10 E12](https://remedium.md/icd10/zaburzenia-wydzielania-wewnetrznego-stanu-odzywienia-i-przemiany-metabolicznej/cukrzyca-zwiazana-z-niedozywieniem)\n * [pacjent.gov.pl](https://pacjent.gov.pl/jak-zyc-z-choroba/jak-zyc-z-cukrzyca) ")
 
@@ -121,7 +121,7 @@ translate_col_names = dict(zip(col_PL, col_EN))
 col_EN_to_PL =  dict(zip(col_EN, col_PL))
 
 st.write("#### Przykładowe dane")
-txt2 = "Wybierz jedną z wierszy, by przetestować modele na przyykładowych danych. W przypadku niezaznaczenia żadnego wiersza, modele przyjmą na wejściu dane wprowadzone ręcznie przez użytkownika.\nPoniższe dane pochodzą od pacjentów z Sunyani Regional Hospital.\n"
+txt2 = "Wybierz jednen z wierszy, by przetestować modele na przykładowych danych. W przypadku niezaznaczenia żadnego wiersza, modele przyjmą na wejściu dane wprowadzone ręcznie przez użytkownika.\nPoniższe dane pochodzą od pacjentów z Sunyani Regional Hospital.\n"
 st.markdown(f'<div style="text-align: justify;">{txt2}</div>', unsafe_allow_html=True)
 
 df_mini =  pd.DataFrame({'Ciąże': [1,6,3,8,0],
@@ -221,4 +221,4 @@ if not dataset.empty:
 st.write("### Repozytoria\nPoniżej zostały podane linki do repozytoriów GithHub powiązanych z przedstawionymi modelami.")
 st.write("* Bazowy [model1](https://github.com/Jeraldaw/huggingface-diabetes-predictor)\n * Bazowy [model2](https://github.com/faisal-titu/Diabetics_detection)\n * Bazowy [model3](https://huggingface.co/spaces/EiaminHassan5251/diabetes-prediction/tree/main)\n * [GitHub PL](https://github.com/gitspartanska) ")
 
-st.caption("Pamiętaj, wyniki zwrócone przez modele nie stanowią podstwy do wystawienia prawnej daignozy i nie zastąpią fachowej oceny lekarza.")
+st.caption("Pamiętaj, wyniki zwrócone przez modele nie stanowią podstwy do wystawienia prawnej diagnozy i nie zastąpią fachowej oceny lekarza.")
