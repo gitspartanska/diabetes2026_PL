@@ -111,7 +111,8 @@ sacler3 =  load_model("models/scaler3.pkl","3b",True)
 
 # Display user's input features
 st.subheader('Dane wprowadzone przez użytkownika')
-st.write("Aby wprowadzić własne dane do modelu, użyj suwaków znajdujących się w pasku po lewej stronie. Wprowadzone dane pokaża się w poniższej tabeli.")
+txt="Aby wprowadzić własne dane do modelu, użyj suwaków znajdujących się w pasku po lewej stronie. Wprowadzone dane pokaża się w poniższej tabeli."
+st.markdown(f'<div style="text-align: justify;">{txt}</div>', unsafe_allow_html=True)
 st.dataframe(df,hide_index=True)
 
 # --- Prediction Section ---
@@ -197,7 +198,9 @@ def make_pred(model, nr,scaler = None):
     else:
         st.error("Model ne został załadowany. Nie można wykonać predykcji.")
 
-st.write("Aby wykonać predykcję na podstawie wybranych danych (domyślnie tych wprowadzonych ręcznie, natomiast w przypadku wybrania przykładow danych z tabeli zaznaczonego przykładu) naciśnij jeden z poniższych przycisków. Naciśnięcie ich spowoduje zwrócenie predykcji ryzyka wystąpienia cukrzycy przez wybrany model.")
+txt="Aby wykonać predykcję na podstawie wybranych danych (domyślnie tych wprowadzonych ręcznie, natomiast w przypadku wybrania przykładow danych z tabeli zaznaczonego przykładu) naciśnij jeden z poniższych przycisków. Naciśnięcie ich spowoduje zwrócenie predykcji ryzyka wystąpienia cukrzycy przez wybrany model."
+st.markdown(f'<div style="text-align: justify;">{txt}</div>', unsafe_allow_html=True)
+
 if flex.button('Wykonaj predykcję (model 1)'):
     make_pred(model1,1)
 
