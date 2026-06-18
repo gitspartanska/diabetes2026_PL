@@ -217,6 +217,8 @@ if not dataset.empty:
     st.write("### Opis bazy danych treningowych")
     st.write(f"Liczba wierszy: {dataset.shape[0]}")
     st.write(f"Liczba kolumn: {dataset.shape[1]}")
+    txt="Poniżej zamieszczone zostały interaktywne wykresy pokazujące wartości poszczególnych cech w zależności od wieku. Jasne kropki odpowiadają osobom zdrowym, ciemne - osobom chorym na cukrzycę."
+    st.markdown(f'<div style="text-align: justify;">{txt}</div>', unsafe_allow_html=True)
     st.scatter_chart(dataset,x= 'Wiek',y = 'BMI', x_label = "Wiek", color = "czy_chory")
     st.scatter_chart(dataset,x= 'Wiek',y = 'Insulina', x_label = "Wiek", color = "czy_chory")
     st.scatter_chart(dataset,x= 'Wiek',y = 'Glukoza', x_label = "Wiek", color = "czy_chory")
