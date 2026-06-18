@@ -111,7 +111,7 @@ sacler3 =  load_model("models/scaler3.pkl","3b",True)
 
 # Display user's input features
 st.subheader('Dane wprowadzone przez użytkownika')
-st.wrtie("Aby wprowadzić własne dane do modelu, użyj suwaków znajdujących się w pasku po lewej stronie. Wprowadzone dane pokaża się w poniższej tabeli.")
+st.write("Aby wprowadzić własne dane do modelu, użyj suwaków znajdujących się w pasku po lewej stronie. Wprowadzone dane pokaża się w poniższej tabeli.")
 st.dataframe(df,hide_index=True)
 
 # --- Prediction Section ---
